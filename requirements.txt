@@ -1,0 +1,6 @@
+scapy
+opensearch-py
+cedarpy
+mcp
+pytest
+requests

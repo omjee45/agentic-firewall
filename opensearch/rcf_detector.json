@@ -1,0 +1,34 @@
+{
+  "name": "port-scan-detector",
+  "description": "Flags source IP making connections to an unusually high number of distinct destination ports",
+  "time_field": "timestamp",
+  "indices": [
+    "network-traffic"
+  ],
+  "detection_interval": {
+    "period": {
+      "interval": 1,
+      "unit": "Minutes"
+    }
+  },
+  "window_delay": {
+    "period": {
+      "interval": 1,
+      "unit": "Minutes"
+    }
+  },
+  "feature_attributes": [
+    {
+      "feature_name": "distinct_dst_ports",
+      "feature_enabled": true,
+      "aggregation_query": {
+        "distinct_dst_ports": {
+          "cardinality": {
+            "field": "dst_port"
+          }
+        }
+      }
+    }
+  ],
+  "category_field": ["src_ip"]
+}

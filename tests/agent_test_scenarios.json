@@ -1,0 +1,54 @@
+[
+  {
+    "scenario_name": "port_scan_clear",
+    "scenario_notes": "High anomaly_grade (1.0), high feature_distinct_dst_ports (25+), same shape as the real Phase 2A case.",
+    "entity_src_ip": "10.0.0.51",
+    "anomaly_score": 10.5,
+    "anomaly_grade": 1.0,
+    "confidence": 0.99,
+    "feature_distinct_dst_ports": 28,
+    "trigger": "Unusually high number of distinct destination ports accessed"
+  },
+  {
+    "scenario_name": "brute_force_pattern",
+    "scenario_notes": "Brute-force-like: high anomaly_grade but LOW distinct port count (1-2), high connection attempts per minute.",
+    "entity_src_ip": "10.0.0.52",
+    "anomaly_score": 9.2,
+    "anomaly_grade": 1.0,
+    "confidence": 0.98,
+    "feature_distinct_dst_ports": 1,
+    "connection_attempts_per_minute": 150,
+    "trigger": "High volume of connections to a single port"
+  },
+  {
+    "scenario_name": "benign_video_call_spike",
+    "scenario_notes": "False-positive risk: moderate anomaly_score, LOW anomaly_grade (0.2), moderate distinct port count (4).",
+    "entity_src_ip": "10.0.0.53",
+    "anomaly_score": 2.1,
+    "anomaly_grade": 0.2,
+    "confidence": 0.90,
+    "feature_distinct_dst_ports": 4,
+    "trigger": "Minor increase in distinct destination ports"
+  },
+  {
+    "scenario_name": "benign_software_update",
+    "scenario_notes": "Burst of connections to many DIFFERENT destination IPs rather than ports. Low anomaly_grade.",
+    "entity_src_ip": "10.0.0.54",
+    "anomaly_score": 1.8,
+    "anomaly_grade": 0.15,
+    "confidence": 0.85,
+    "feature_distinct_dst_ports": 1,
+    "feature_distinct_dst_ips": 15,
+    "trigger": "Connections to multiple destination IPs"
+  },
+  {
+    "scenario_name": "ambiguous_low_confidence",
+    "scenario_notes": "High anomaly_grade but very LOW confidence value (0.05). Tests agent reasoning on uncertain detection.",
+    "entity_src_ip": "10.0.0.55",
+    "anomaly_score": 5.0,
+    "anomaly_grade": 0.95,
+    "confidence": 0.05,
+    "feature_distinct_dst_ports": 20,
+    "trigger": "Unusually high number of distinct destination ports accessed"
+  }
+]
