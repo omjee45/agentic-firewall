@@ -2,7 +2,7 @@
 
 **An AI writes your firewall rules. A formal verification engine makes sure it can't be trusted — and blocks it anyway if it tries anything stupid.**
 
-![Python](https://img.shields.io/badge/Python-3.11+-blue) ![OpenSearch](https://img.shields.io/badge/OpenSearch-RCF%20Anomaly%20Detection-005EB8) ![Ollama](https://img.shields.io/badge/Ollama-llama3.2%3A1b-black) ![AWS Cedar](https://img.shields.io/badge/AWS%20Cedar-Policy%20Validation-orange) ![iptables](https://img.shields.io/badge/iptables-Kernel%20Enforcement-red)
+![Python](https://img.shields.io/badge/Python-3.11%2B-blue?style=flat-square) ![OpenSearch](https://img.shields.io/badge/OpenSearch-RCF%20Anomaly%20Detection-005EB8?style=flat-square) ![Ollama](https://img.shields.io/badge/Ollama-llama3.2%3A1b-black?style=flat-square) ![AWS Cedar](https://img.shields.io/badge/AWS%20Cedar-Policy%20Validation-orange?style=flat-square) ![iptables](https://img.shields.io/badge/iptables-Kernel%20Enforcement-red?style=flat-square)
 
 Built for the AWS "First Commit" Hackathon — **Build It Track**
 
