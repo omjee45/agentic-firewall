@@ -1,5 +1,4 @@
 #!/bin/bash
-# Verification commands for standalone tools
 
 echo "=== Verifying OpenSearch ==="
 curl -s -X GET http://localhost:9200/ | grep -i '"cluster_name"\|"version"'

@@ -2,7 +2,6 @@ import sys
 import os
 import json
 
-# Add root to sys.path to import agent module
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from agent.agent import evaluate_anomaly, MODEL_NAME
 

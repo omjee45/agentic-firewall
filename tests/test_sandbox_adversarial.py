@@ -1,7 +1,6 @@
 import sys
 import os
 
-# Add root to sys.path
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 from policy.validator import is_valid_cedar_syntax
