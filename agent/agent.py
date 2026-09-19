@@ -1,6 +1,9 @@
 import json
 import requests
-from .prompts import SYSTEM_PROMPT, RESPONSE_SCHEMA
+try:
+    from agent.prompts import SYSTEM_PROMPT, RESPONSE_SCHEMA
+except ImportError:
+    from prompts import SYSTEM_PROMPT, RESPONSE_SCHEMA
 
 OLLAMA_URL = "http://localhost:11434/api/chat"
 MODEL_NAME = "llama3.2:1b"

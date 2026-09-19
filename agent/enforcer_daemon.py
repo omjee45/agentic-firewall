@@ -7,7 +7,10 @@ import json
 import contextlib
 import io
 
-sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+from pathlib import Path
+PROJECT_ROOT = Path(__file__).resolve().parent.parent
+if str(PROJECT_ROOT) not in sys.path:
+    sys.path.insert(0, str(PROJECT_ROOT))
 
 from agent.fetch_anomaly import fetch_latest_anomaly
 from agent.enforcer import process_anomaly_payload

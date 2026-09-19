@@ -1,7 +1,10 @@
 #!/bin/bash
-set -e
 
-echo "Starting Live Firewall Daemon with sudo..."
-PYTHON_BIN=$(which python3)
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
+PROJECT_ROOT="$(dirname "$SCRIPT_DIR")"
 
-sudo DRY_RUN=false $PYTHON_BIN agent/enforcer_daemon.py
+VENV_PYTHON="${PROJECT_ROOT}/venv/bin/python"
+
+echo "Starting Live Firewall Daemon..."
+
+sudo PYTHONPATH="${PROJECT_ROOT}" "$VENV_PYTHON" -m agent.enforcer_daemon
